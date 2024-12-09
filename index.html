@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+/* Light/Dark Mode*/
+body {
+  background-color: rgba(0, 0, 0, 0.894);
+  color: rgba(255, 255, 255, 0.949);
+}
+
+.dark-mode {
+    background-color: white;
+    color: black;
+  .light-button {
+    background-color: rgba(0, 0, 0, 0.894);
+    color: white;
+  }
+}
+
+.light-button {
+  background-color: rgb(240, 240, 240);
+  color: black;
+  border: none;
+  border-radius: 50%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+/* Collapsible sections */
+
+.collapsible {
+  background-color: #3f5863;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #2a3b43;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  
+}
+
+/* Text on bottom of web page */
+
+.bottom-text {
+    padding: 15px;
+    bottom: 0;
+    font-style: italic;
+}
+
+/* Orienting images in the 'interests' and 'specialties' page */
+.column {
+  float: left;
+  width: 40%;
+  padding: 1px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* stacking png's from 'interests' section when width is at or below 500px */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<button class="light-button" onclick="myFunction()">Toggle Light/Dark mode</button>
+<h2>Gabriel Dasilva</h2> 
+
+<button class="collapsible">About</button>
+<div class="content">
+  <u><h4>Education</h4></u>
+  <p>Computer Science (AA) - Housatonic Community College (2024)
+  <u><h4>Work</h4></u>
+  <p>Barback at Foolproof Brewing Company, Bridgeport, CT (present)</p>
+  <p>Assistant Painter at Edwardo Osello Painters, Monroe, CT (2022-present)</p>
+  <p>Assistant Field Tech at Tallento Energy and Construction, Bridgeport, CT (2020-2021)</p>
+  <u><a href="https://drive.google.com/file/d/146ke2onbfFIG-zKbOwyykSbZUSXAcdLw/view?usp=sharing" style="color:red;" target="_blank">Full Resume</a></u>
+  <br><br>
+  <u><a href="https://github.com/gdasilva012" style="color:red;" target="_blank">Githhub Page</a></u>
+  
+ 
+</div>
+
+<button class="collapsible">Interests</button>
+<div class="content">
+
+    <div class="row">
+        <div class="column">
+            <h4>Hiking</h4>
+            <img src="hike.png" alt="Hiking" style="max-width:25%; height:auto;">
+        </div>
+        <div class="column">
+            <h4>Strength Training</h4>
+            <img src="strength.webp" alt="Strength" style="max-width:25%; height:auto;">
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h4>Craft Beer</h4>
+            <img src="beer.png" alt="Beer" style="max-width:25%; height:auto;">
+        </div>
+        <div class="column">
+            <h4>Game Collecting</h4>
+            <img src="gba.png" alt="gba" style="max-width:25%; height:auto;">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h4>Bass Guitar</h4>
+            <img src="bass_guitar.webp" alt="Guitar" style="max-width:25%; height:auto;">
+        </div>
+    </div>
+   
+</div>
+
+<button class="collapsible">Projects</button>
+<div class="content">
+  <h4>Bassist for alternative rock band Gvrden (2017 - 2021)</h4>
+
+  <img src="Bass.jpg" alt="Mask Bass" style="max-width:100%; height:auto;"> <br>
+  <iframe width="650" height="300"
+    src="https://www.youtube.com/embed/IbC766WPpxk">
+  </iframe>
+
+</div>
+
+<button class="collapsible">Specialties</button>
+<div class="content">
+    <div class="row">
+        <div class="column">
+            <h4>Java</h4>
+            <img src="java_logo.png" alt="Java" style="max-width:25%; height:auto;">
+        </div>
+        <div class="column">
+            <h4>Power Tools</h4>
+            <img src="tools.png" alt="tools" style="max-width:25%; height:auto;">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h4>Customer Service</h4>
+            <img src="customer.png" alt="customer" style="max-width:25%; height:auto;">
+        </div>
+        <div class="column">
+          <h4>Blower Door</h4>
+          <img src="blower_door.png" alt="door" style="max-width:25%; height:auto;">
+      </div>
+    </div>
+  
+</div>
+
+<button class="collapsible">Contact</button>
+<div class="content">
+    <h2>Contact me at gdasilva012@gmail.com:</h2>
+
+    <form action="mailto:gdasilva012@gmail.com" method="post" enctype="text/plain">
+    Name:<br>
+    <input type="text" name="name"><br>
+    E-mail:<br>
+    <input type="text" name="mail"><br>
+    Comment(s):<br>
+    <input type="text" size="40" name="comments"><br><br>
+    <input type="submit" value="Send">
+    <input type="reset" value="Reset">
+    </form>
+</div>
+
+<p class="bottom-text">Gabriel Dasilva, 2024 </p>
+
+<script>
+/* Collapsibles */
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+/* Dark Mode */
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
